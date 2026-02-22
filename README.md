@@ -94,3 +94,24 @@ fertilizer_website/
 │
 ├── static/
 │   └── style.css
+from flask import Flask, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    result = ""
+    if request.method == 'POST':
+        n = request.form['nitrogen']
+        p = request.form['phosphorus']
+        k = request.form['potassium']
+        ph = request.form['ph']
+        crop = request.form['crop']
+
+        # Temporary logic (replace with ML later)
+        result = "Urea Fertilizer"
+
+    return render_template('index.html', result=result)
+
+if __name__ == "__main__":
+    app.run(debug=True)
