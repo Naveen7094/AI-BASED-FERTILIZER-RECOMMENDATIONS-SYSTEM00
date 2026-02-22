@@ -115,3 +115,40 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fertilizer Recommendation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 Fertilizer Recommendation System</h1>
+
+    <form method="POST">
+        <input type="number" name="nitrogen" placeholder="Nitrogen (N)" required>
+        <input type="number" name="phosphorus" placeholder="Phosphorus (P)" required>
+        <input type="number" name="potassium" placeholder="Potassium (K)" required>
+        <input type="number" step="0.1" name="ph" placeholder="Soil pH" required>
+
+        <select name="crop" required>
+            <option value="">Select Crop</option>
+            <option>Rice</option>
+            <option>Wheat</option>
+            <option>Maize</option>
+            <option>Pulses</option>
+        </select>
+
+        <button type="submit">Get Recommendation</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        Recommended Fertilizer: <b>{{ result }}</b>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
