@@ -152,3 +152,40 @@ if __name__ == "__main__":
 
 </body>
 </html>
+body {
+    background: #e8f5e9;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: green;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    background: green;
+    color: white;
+    border: none;
+}
+
+.result {
+    background: #c8e6c9;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
